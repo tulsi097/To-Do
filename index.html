@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart To-Do</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home" class="screen active">
+
+  <!-- BACKGROUND EFFECT -->
+  <div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="hero">
+    <h1>✨ Smart To-Do</h1>
+    <p>Plan your day. Focus better. Achieve more.</p>
+
+    <button id="startBtn">🚀 Get Started</button>
+  </div>
+
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="screen">
+
+  <div class="app">
+
+    <header>
+      <h1>✨ Smart To-Do</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab active" data-tab="create">➕ Create</button>
+      <button class="tab" data-tab="view">📋 Tasks</button>
+    </div>
+
+    <!-- CREATE TAB -->
+    <div id="create" class="tab-content active">
+
+      <div class="card">
+        <input id="titleInput" placeholder="Task title..." />
+        <input id="descInput" placeholder="Description..." />
+
+        <div class="row">
+          <select id="priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+
+          <input id="emojiInput" placeholder="😀" />
+        </div>
+
+        <div class="emoji-picker">
+          <span class="emoji">📚</span>
+          <span class="emoji">💻</span>
+          <span class="emoji">🏃</span>
+          <span class="emoji">🔥</span>
+        </div>
+
+        <button id="addBtn">➕ Add Task</button>
+      </div>
+
+    </div>
+
+    <!-- VIEW TAB -->
+    <div id="view" class="tab-content">
+
+      <div class="quote-box">
+        <button id="loadQuote">💡 Get Quote</button>
+        <p id="quote"></p>
+      </div>
+
+      <input id="search" placeholder="🔍 Search tasks..." />
+
+      <ul id="taskList"></ul>
+
+      <div class="footer">
+        <span id="stats"></span>
+
+        <div class="actions">
+          <button id="clearCompleted">Clear Done</button>
+          <button id="clearAll">Clear All</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
